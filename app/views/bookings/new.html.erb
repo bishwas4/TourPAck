@@ -1,0 +1,20 @@
+<div class="container">
+	<h1 style="text-align: center;">Book Now</h1>
+	<%= form_for @booking do |f| %>
+		<div class='form-group'>
+			<%= f.label :package_id, 'Package', class: 'label-control' %>
+		  <%= f.select :package_id, options_for_select(packages_options), {:include_blank => "Select"}, class: 'form-control package-select' %>
+	  </div>
+	  <div class='package-detail'>
+	  </div>
+	  <div class="form-group">
+	  	<%=f.label :booked_for, 'When', class: 'label-control'%>
+	  	<%= f.date_field :booked_for, class: 'form-control' %>
+	  </div>
+	  <div class="form-group">
+	  	<%=f.label :no_of_person, 'Total No of People', class: 'label-control'%>	
+	  	<%= f.number_field :no_of_person, class: 'form-control' %>
+	  </div>
+	  <%=f.submit 'Book', class: 'btn btn-primary' %>
+	<% end %>
+</div>      

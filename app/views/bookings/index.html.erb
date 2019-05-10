@@ -1,0 +1,32 @@
+<div class="container">
+  <h3 style="text-align: center;"> List of Packages</h3>
+    <table class="table table-hover">
+        <thead>
+          <tr>
+          	<th>Package</th>
+            <th>Booked For</th>
+            <th>No of People</th>
+            
+
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <% @bookings.each do |booking| %>
+            <tr>
+            	<td><%= booking.package.title %>	
+              <td><%= booking.booked_for %></td>
+              <td><%= booking.no_of_person %></td>
+              
+              
+            </tr>
+          <% end %>
+        </tbody>
+
+      <br>
+
+    </table>
+    <%= link_to 'Add Booking', new_booking_path, class: 'btn btn-primary'  %></td>
+     
+</div>      

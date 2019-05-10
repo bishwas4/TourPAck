@@ -31,6 +31,7 @@ gem 'toastr_rails'
 gem 'pry'
 
 gem 'devise'
+gem 'rails_admin'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'

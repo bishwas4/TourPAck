@@ -1,5 +1,5 @@
 class PackagesController < ApplicationController
-  before_action :set_package, only: [:show, :edit, :update, :destroy]
+  before_action :set_package, only: [:show, :edit, :update, :destroy, :fetch_detail]
 
   # GET /packages
   # GET /packages.json
@@ -59,6 +59,14 @@ class PackagesController < ApplicationController
       format.html { redirect_to packages_url, notice: 'Package was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def fetch_detail
+    render json: {
+      title: @package.title,
+      description: @package.description,
+      price: @package.price
+    }
   end
 
   private
