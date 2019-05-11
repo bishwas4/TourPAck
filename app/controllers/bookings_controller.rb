@@ -29,7 +29,13 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:package_id, :booked_for, :no_of_person)
+    params.require(:booking).permit(:package_id, :booked_for, :no_of_person, :contact)
   end
-
+  def destroy
+    @booking = Booking.find(params[:id])
+    if @booking.present?
+      @booking.destroy
+    end
+    redirect_to root_url
+end
 end

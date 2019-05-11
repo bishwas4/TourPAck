@@ -18,7 +18,8 @@
               <td><%= package.price %> $</td>
             <%if user.signed_in?%>  
               <td><%= link_to 'Show', package ,class: 'btn btn-success' %></td>
-            <%end%>  
+              <td><%= link_to 'Edit', edit_package_path(package), class: 'btn btn-warning' %></td>
+              <td><%= link_to 'Destroy', package, class: 'btn btn-danger',method: :delete, data: { confirm: 'Are you sure?' } %></td>
             </tr>
           <% end %>
         </tbody>
@@ -26,5 +27,5 @@
       <br>
 
     </table>
-      <%= link_to 'Book Package', booking_path, class: 'btn btn-primary '%>
+      <%= link_to 'New Package', new_package_path, class: 'btn btn-primary '%>
 </div>      

@@ -6,6 +6,7 @@
           	<th>Package</th>
             <th>Booked For</th>
             <th>No of People</th>
+            <th>Status</th>>
             
 
             <th colspan="3"></th>
@@ -18,8 +19,11 @@
             	<td><%= booking.package.title %>	
               <td><%= booking.booked_for %></td>
               <td><%= booking.no_of_person %></td>
-              
-              
+              <%if booking.confirm==true %>
+                <td><strong>Confirmed</strong></td>
+              <%else%>
+                <td><%= link_to 'Cancle Booking', booking, class: 'btn btn-danger',method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <%end%>
             </tr>
           <% end %>
         </tbody>

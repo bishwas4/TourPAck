@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_10_181048) do
+ActiveRecord::Schema.define(version: 2019_05_11_164545) do
 
   create_table "bookings", force: :cascade do |t|
     t.datetime "booked_for"
@@ -19,6 +19,9 @@ ActiveRecord::Schema.define(version: 2019_05_10_181048) do
     t.datetime "updated_at", null: false
     t.integer "user_id"
     t.integer "package_id"
+    t.integer "contact"
+    t.integer "status"
+    t.boolean "confirm"
     t.index ["package_id"], name: "index_bookings_on_package_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
