@@ -12,9 +12,26 @@
   			<%= @package.price %>$ 
 		</div>
 		<div class="panel-body">
-			
-			<%= link_to 'Edit', edit_package_path(@package), class: 'btn btn-primary' %> 
-			<%= link_to 'Back', packages_path, class: 'btn btn-warning' %>
+			<strong>Inclusion</strong>
+  			<%= @package.inclusion %> 
+		</div>
+		<div class="panel-body">
+			<strong>Exclusion</strong>
+  			<%= @package.exclusion %>
+		</div>
+		<div class="panel-body">
+			<strong>Pick Up Location</strong>
+  			<%= @package.pickup %>$ 
+		</div>
+		<div class="panel-body">
+			<%if user_signed_in? %>
+				<%if current_user.admin? %>
+					<%= link_to 'Edit', edit_package_path(@package), class: 'btn btn-primary' %> 
+
+					<%= link_to 'Back', packages_path, class: 'btn btn-warning' %>
+				<%end%>
+				<%= link_to 'Book', new_booking_path, class: 'btn btn-primary' %> 
+			<%end%>	
 		</div>
 
 	</div>

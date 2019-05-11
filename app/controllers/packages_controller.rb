@@ -65,7 +65,10 @@ class PackagesController < ApplicationController
     render json: {
       title: @package.title,
       description: @package.description,
-      price: @package.price
+      price: @package.price,
+      inclusion: @package.inclusion,
+      exclusion: @package.exclusion,
+      pickup: @package.pickup,
     }
   end
 
@@ -77,6 +80,6 @@ class PackagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def package_params
-      params.require(:package).permit(:title, :description, :price)
+      params.require(:package).permit(:title, :description, :price, :inclusion, :exclusion, :pickup)
     end
 end
