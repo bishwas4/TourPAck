@@ -12,14 +12,17 @@
   <body>
     <%= render 'toastr_rails/flash' %>
 
-    <nav class="navbar navbar-inverse header">
+    <nav class="navbar navbar-inverse header navbar-fixed-top">
       <ul class="nav navbar-nav navbar-left">
-        <li ></li>
+        <img style="max-width:100px; margin-top: -40px; margin-left: 40px; padding-top: 5px; padding-bottom: -10px; text-align: center " src="https://i.ibb.co/YfY73QD/d94b5064-998e-485e-9d89-4b266cf38c7e-200x200.png" alt="d94b5064-998e-485e-9d89-4b266cf38c7e-200x200"> 
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to 'Home', root_path %></li>
         
         <%if user_signed_in? %>
+          <li><%= link_to 'My Booking', bookings_path %></li>
+          <li><%=current_user.name%>
+
           <li><%= link_to 'Log Out', destroy_user_session_path, :method => :delete %></li>
 
         <%else%>  
@@ -27,22 +30,24 @@
           <li><%= link_to '<i class = "glyphicon glyphicon-log-in"></i> Sign In'.html_safe, new_user_session_path %></li>
         <%end -%>
 
-      </ul>
-    </nav>
-    <%= yield %>
+      </ul></nav><br>
+    </nav> </br>
+    <div style="margin-top: 30px;"><%= yield %></div>
 
 
 <div class="footer">
-  <p>© 2019 Himal Malla Thakuri Rights Reserved</p><br/>
-  <p><a href="https://www.facebook.com/himal.princemalla">Contact Me</a></p>
+  
+  <p>© 2019 Copyright!!<a href="https://www.facebook.com/himal.princemalla">Contact Me</a></p>
 </div>
 <style>
   .header{
-    position: fixed;
+    
     width: 100%;
   }
   .footer {
     position: fixed;
+  padding-top: 5% 
+    top: 98%;
     left: 0;
     bottom: 0;
     width: 100%;

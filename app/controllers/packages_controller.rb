@@ -69,6 +69,7 @@ class PackagesController < ApplicationController
       inclusion: @package.inclusion,
       exclusion: @package.exclusion,
       pickup: @package.pickup,
+      avatar: @package.avatar,
     }
   end
 
@@ -80,6 +81,6 @@ class PackagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def package_params
-      params.require(:package).permit(:title, :description, :price, :inclusion, :exclusion, :pickup)
+      params.require(:package).permit(:title, :description, :price, :inclusion, :exclusion, :pickup, :avatar)
     end
 end

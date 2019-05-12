@@ -1,102 +1,63 @@
 <!-- Page Content -->
-<div class="container">
+<body>
 
-  <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Visit Your Destination</h1>
+  <!-- Navigation -->
+  
+  <!-- Header -->
 
-  <hr class="mt-2 mb-5">
 
-  <div class="row text-center text-lg-left">
-
-    <div class="col-lg-3 col-md-4 col-6">
-      <a href="/bookings/new" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/pWkk7iiCoDM/400x300" alt="">
-          </a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-6">
-      <a href="/bookings/new" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/aob0ukAYfuI/400x300" alt="">
-          </a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-6">
-      <a href="/bookings/new" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/EUfxH-pze7s/400x300" alt="">
-          </a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-6">
-      <a href="/bookings/new" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/M185_qYH8vg/400x300" alt="">
-          </a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-6">
-      <a href="/bookings/new" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/sesveuG_rNo/400x300" alt="">
-          </a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-6">
-      <a href="/bookings/new" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/AvhMzHwiE_0/400x300" alt="">
-          </a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-6">
-      <a href="/bookings/new" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/2gYsZUmockw/400x300" alt="">
-          </a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-6">
-      <a href="/bookings/new" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/EMSDtjVHdQ8/400x300" alt="">
-          </a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-6">
-      <a href="/bookings/new" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/8mUEy0ABdNE/400x300" alt="">
-          </a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-6">
-      <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/G9Rfc1qccH4/400x300" alt="">
-          </a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-6">
-      <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/aJeH0KcFkuc/400x300" alt="">
-          </a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-6">
-      <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/p2TQ-3Bh3Oo/400x300" alt="">
-          </a>
-    </div>
-  </div>
+  <!-- Page Content -->
   <div class="container">
-  <h3 style="text-align: center;"> List of Packages</h3>
-    <table class="table table-hover">
-        <thead>
-          <tr>
-            <th>Title</th>
-            <th>Description</th>
-            <th>Price</th>
-            <th colspan="3"></th>
-          </tr>
-        </thead>
 
-        <tbody>
-          <% @packages.each do |package| %>
-            <tr>
-              <td><%= package.title %></td>
-              <td><%= package.description %></td>
-              <td><%= package.price %> $</td>
-              <%if user_signed_in?%>
-              <td><%= link_to 'Show', package ,class: 'btn btn-success' %></td>
-              <%end%>
-          <% end %>
-        </tbody>
 
-      <br>
+    <!-- /.row -->
+    <h3 style="text-align: center;"> List of Packages</h3>
 
-    </table>
-      <%= link_to 'Book Packages', new_booking_path, class: 'btn btn-primary '%>
-</div>
-      <h2>Visit US</h2>      
-      <div class="mapouter"><div class="gmap_canvas"><iframe width="1170" height="333" id="gmap_canvas" src="https://maps.google.com/maps?q=Kathmandu%20thamel&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.crocothemes.net"></a></div><style>.mapouter{position:relative;text-align:right;height:333px;width:1070px;}.gmap_canvas {overflow:hidden;background:none!important;height:333px;width:1070px;}</style></div>
-</div>
+    <div class="row">
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <img class="card-img-top" src="https://www.oyorooms.com/blog/wp-content/uploads/2018/06/Nepal-Historical-Places-Featured-Image.jpg"
+          height="300" width="300" alt="">
+          <div class="card-body">
+            <h4 class="card-title">Visit Cultural</h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus.</p>
+          </div>
+          <div class="card-footer">
+            <div style="text-align: center;"><%= link_to 'Book Packages', new_booking_path, class: 'btn btn-primary '%></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <img class="card-img-top" src="https://media-cdn.tripadvisor.com/media/photo-s/0b/6e/6c/db/natural-beauty-of-nepal.jpg"
+          height="300" width="300" alt="">
+          <div class="card-body">
+            <h4 class="card-title">Beauty of Nature</h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus.</p>
+          </div>
+          <div class="card-footer">
+            <div style="text-align: center;"><%= link_to 'Book Packages', new_booking_path, class: 'btn btn-primary '%></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <img class="card-img-top" src="http://www.expeditionsnepal.com/wp-content/uploads/2019/03/himalaya-4039495_1920-1920x1200.jpg"
+          height="300" width="300" alt="">
+          <div class="card-body">
+            <h4 class="card-title">See The Beauty of Mountain</h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus.</p>
+          </div>
+          <div class="card-footer">
+            <div style="text-align: center;"><%= link_to 'Book Packages', new_booking_path, class: 'btn btn-primary '%></div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="col-md-12">
+        
+        <h2 style="text-align: center;">Visit US</h2>      
+        <div class="mapouter"><div class="gmap_canvas"><iframe width="1170" height="333" id="gmap_canvas" src="https://maps.google.com/maps?q=Kathmandu%20thamel&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.crocothemes.net"></a></div><style>.mapouter{position:relative;text-align:right;height:333px;width:1070px;}.gmap_canvas {overflow:hidden;background:none!important;height:333px;width:1070px;}</style></div>
+      </div>
+  </div>
+

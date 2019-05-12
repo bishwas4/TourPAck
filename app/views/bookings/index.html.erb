@@ -1,5 +1,8 @@
 <div class="container">
-  <h3 style="text-align: center;"> List of Packages</h3>
+  <h3 style="text-align: center;"> My Booking</h3>
+    <%if user_signed_in? %>
+         Welcome <%=@current_user_name %>
+    <%end%>      
     <table class="table table-hover">
         <thead>
           <tr>
@@ -31,6 +34,6 @@
       <br>
 
     </table>
-    <%= link_to 'Add Booking', root_path, class: 'btn btn-primary'  %></td>
+    <%= link_to 'Add Booking', new_booking_path, class: 'btn btn-primary'  %></td>
      
 </div>      

@@ -21,7 +21,11 @@
 		</div>
 		<div class="panel-body">
 			<strong>Pick Up Location</strong>
-  			<%= @package.pickup %>$ 
+  			<%= @package.pickup
+  			 %>$ 
+		</div>
+		
+  			<%= image_tag @package.avatar %> 
 		</div>
 		<div class="panel-body">
 			<%if user_signed_in? %>

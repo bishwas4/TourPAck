@@ -13,11 +13,11 @@
 	  </div>
 	  <div class="form-group">
 	  	<%=f.label :no_of_person, 'Total No of People', class: 'label-control'%>	
-	  	<%= f.number_field :no_of_person, class: 'form-control' %>
+	  	<%= f.number_field :no_of_person,:input_html => {:min=>'1' , :max=>10}, class: 'form-control' %>
 	  </div>
 	  <div class="form-group">
 	  	<%=f.label :contact, 'Mobie No', class: 'label-control'%>	
-	  	<%= f.number_field :contact, class: 'form-control' %>
+	  	<%= f.number_field :contact,:input_html => {:minlength => 5 , maxlength: 10}, class: 'form-control' %>
 	  </div>
 
 	  <%=f.submit 'Book', class: 'btn btn-primary' %>
