@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount PointlessFeedback::Engine, :at => '/feedback'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :packages do
     member do

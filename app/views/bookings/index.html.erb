@@ -1,7 +1,7 @@
 <div class="container">
   <h3 style="text-align: center;"> My Booking</h3>
-    <%if user_signed_in? %>
-         Welcome <%=@current_user_name %>
+    <% if user_signed_in? %>
+      <h3>Welcome <h4><%= current_user.name %> !!!</h4></h3>
     <%end%>      
     <table class="table table-hover">
         <thead>
@@ -9,7 +9,7 @@
           	<th>Package</th>
             <th>Booked For</th>
             <th>No of People</th>
-            <th>Status</th>>
+            <th>Status</th>
             
 
             <th colspan="3"></th>
@@ -34,6 +34,6 @@
       <br>
 
     </table>
-    <%= link_to 'Add Booking', new_booking_path, class: 'btn btn-primary'  %></td>
+   <div style="text-align: center;"> <%= link_to 'New Tour', new_booking_path, class: 'btn btn-primary'  %></div>></td>
      
 </div>      

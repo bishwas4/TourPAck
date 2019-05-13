@@ -18,10 +18,9 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to 'Home', root_path %></li>
-        
         <%if user_signed_in? %>
           <li><%= link_to 'My Booking', bookings_path %></li>
-          <li><%=current_user.name%>
+          <li><%= link_to 'My Profile', edit_user_registration_path %>
 
           <li><%= link_to 'Log Out', destroy_user_session_path, :method => :delete %></li>
 
@@ -34,7 +33,7 @@
     </nav> </br>
     <div style="margin-top: 30px;"><%= yield %></div>
 
-
+<div style="text-align: center"><%=link_to 'Give Us a FeedBack', pointless_feedback_path, class: 'btn btn-primary' %></div>>    
 <div class="footer">
   
   <p>© 2019 Copyright!!<a href="https://www.facebook.com/himal.princemalla">Contact Me</a></p>

@@ -24,7 +24,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 
 gem 'pg'
-
+gem 'pointless_feedback'
 gem 'bootstrap-sass'
 gem 'toastr_rails'
 

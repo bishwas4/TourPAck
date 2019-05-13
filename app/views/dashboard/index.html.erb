@@ -9,7 +9,7 @@
   <!-- Page Content -->
   <div class="container">
 
-
+    <h4>Hi</h4>, <%=current_user.name%>!
     <!-- /.row -->
     <h3 style="text-align: center;"> List of Packages</h3>
 
@@ -59,5 +59,6 @@
         <h2 style="text-align: center;">Visit US</h2>      
         <div class="mapouter"><div class="gmap_canvas"><iframe width="1170" height="333" id="gmap_canvas" src="https://maps.google.com/maps?q=Kathmandu%20thamel&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.crocothemes.net"></a></div><style>.mapouter{position:relative;text-align:right;height:333px;width:1070px;}.gmap_canvas {overflow:hidden;background:none!important;height:333px;width:1070px;}</style></div>
       </div>
+      <div style="text-align: center"><%=link_to 'Give Us a FeedBack', pointless_feedback_path, class: 'btn btn-primary' %></div>>
   </div>
 
