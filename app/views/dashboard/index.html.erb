@@ -10,8 +10,8 @@
   <div class="container">
 
     <h4>Hi</h4>, 
-    <%if signed_in?>
-      <%=current_user.name%>!
+    <% if signed_in? %>
+      <%= current_user.name %>!
     <%end%>  
     <!-- /.row -->
     <h3 style="text-align: center;"> List of Packages</h3>
