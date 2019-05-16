@@ -5,6 +5,6 @@ class Booking < ApplicationRecord
   belongs_to :package
   
   # Valdations
-  validates :contact, required: true, length: { minimum: 6, maximum: 10}
+  validates :contact, presence: true, length: { minimum: 6, maximum: 10}
   
 end
