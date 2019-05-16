@@ -29,7 +29,7 @@ gem 'bootstrap-sass'
 gem 'toastr_rails'
 gem 'paperclip'
 gem 'pry'
-
+gem 'test-unit'
 gem 'devise'
 gem 'rails_admin'
 

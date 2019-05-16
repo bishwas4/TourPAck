@@ -161,6 +161,7 @@ GEM
       jquery-rails (>= 4.0)
       rails (>= 4.0)
       typhoeus (~> 0.7, >= 0.7.3)
+    power_assert (1.1.4)
     pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
@@ -253,6 +254,8 @@ GEM
     temple (0.8.1)
     terrapin (0.6.0)
       climate_control (>= 0.0.3, < 1.0)
+    test-unit (3.3.3)
+      power_assert
     thor (0.20.3)
     thread_safe (0.3.6)
     tilt (2.0.9)
@@ -306,6 +309,7 @@ DEPENDENCIES
   spring-watcher-listen (~> 2.0.0)
   sprockets-rails
   sqlite3
+  test-unit
   toastr_rails
   turbolinks (~> 5)
   tzinfo-data
