@@ -8,11 +8,23 @@
 
   <!-- Page Content -->
   <div class="container">
+  <div id="slideshow">
+   <div>
+     <img src="https://trekroute.com/wp-content/uploads/2015/07/Everest-Base-Camp-e1438949700440.jpg" height="400" width="1000" >
+   </div>
+   <div>
+     <img src="https://www.nepalitimes.com/wp-content/uploads/2019/02/rara-1.jpg" height="400" width="1000">
+   </div>
+   <div>
+     <img src="http://images4.fanpop.com/image/photos/23700000/Beautiful-nepal-natrally-nepal-23757405-1280-800.jpg" height="400" width="1000">
 
-    <h4>Hi</h4>, 
+   </div>
+</div>
+       
     <% if signed_in? %>
-      <%= current_user.name %>!
+      <h4>Hi</h4><%= current_user.name %>!  
     <%end%>  
+
     <!-- /.row -->
     <h3 style="text-align: center;"> List of Packages</h3>
 
@@ -64,4 +76,6 @@
       </div>
       <div style="text-align: center"><%=link_to 'Give Us a FeedBack', pointless_feedback_path, class: 'btn btn-primary' %></div>>
   </div>
+<script type="text/javascript">
 
+</script>>
