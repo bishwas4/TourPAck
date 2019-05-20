@@ -2,13 +2,21 @@
 <body>
 
   <!-- Navigation -->
-  
+ <div class="welcom" style="margin-left: 20%;">
+    <% if signed_in? %>
+      <h4 >Hi</h4><%= current_user.name %>!  
+    <%end%>
+ </div>
   <!-- Header -->
 
 
   <!-- Page Content -->
-  <div class="container">
+  <div class="container" style="text-align: center;">
+    <div class="Header Text">
+      <H2> Welcome to Treak & Tour Nepal </H2>
+    </div>
   <div id="slideshow">
+
    <div>
      <img src="https://trekroute.com/wp-content/uploads/2015/07/Everest-Base-Camp-e1438949700440.jpg" height="400" width="1000" >
    </div>
@@ -19,6 +27,7 @@
      <img src="http://images4.fanpop.com/image/photos/23700000/Beautiful-nepal-natrally-nepal-23757405-1280-800.jpg" height="400" width="1000">
 
    </div>
+   <p style="font-size:1vw;">“Be fearless in the pursuit of what sets your soul on fire.” – Jennifer Lee</p>
 </div>
        
     <% if signed_in? %>
@@ -81,9 +90,6 @@ $("#slideshow > div:gt(0)").hide();
 
 setInterval(function() { 
   $('#slideshow > div:first')
-    .fadeOut(10)
-    .next()
-    .end()
-    .appendTo('#slideshow');
-},  30);
-</script>>
+    slideshow.goToPrevSlide();   
+} ,30)    
+</script> 
